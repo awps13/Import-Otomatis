@@ -19,7 +19,7 @@
         <p>Extract file aplikasi di folder htdocs tadi.</p>
         <img src="extrak.png" alt="" style="max-width: 500px">
         <div style="display: flex; justify-content: center;">
-            <p style="padding: 10px;"><a href="tutor1.php">back</a></p>
+            <p style="padding: 10px;"><a href="tutor3.php">back</a></p>
             <p style="padding: 10px;"><a href="tutor3.php">next</a></p>
         </div>
     </div>
