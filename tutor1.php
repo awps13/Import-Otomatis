@@ -17,11 +17,15 @@
     <div style="text-align: center;">
         <h1>Download File Aplikasi</h1>
         <div style="display: flex; justify-content: center;">
-            <p style="">copy path ini</p>
-            <p id="path" onclick="copyPath()" style="margin-left: 20px;">C:\xampp\htdocs</p>
+            <p>1. copy path ini</p>
+            <p id="path" onclick="copyPath()" style="margin-left: 20px;"><a href="">C:\xampp\htdocs</a></p>
+        </div>
+        <div>
+            <p>2. copy path ke path tujuan download file</p>
+            <img src="image.png" alt="" style="max-width: 600px">
         </div>
         <div style="display: flex; justify-content: center;">
-            <p>download file aplikasi</p>
+            <p>3. download file aplikasi</p>
             <p style="margin-left: 20px;"><a href="TA-WEB.zip">download</a></p>
         </div>
         <div style="display: flex; justify-content: center;">

@@ -15,11 +15,11 @@
 </head>
 <body>
     <div style="text-align: center;">
-        <h1>Install Database</h1>
-        <p>download file aplikasi</p>
-        <button><a href="TA-WEB.zip">download</a></button>
+        <h1>Extract File Aplikasi</h1>
+        <p>Extract file aplikasi di folder htdocs tadi.</p>
+        <img src="extrak.png" alt="">
         <div style="display: flex; justify-content: center;">
-            <p style="padding: 10px;"><a href="tutor2.php">back</a></p>
+            <p style="padding: 10px;"><a href="tutor1.php">back</a></p>
             <p style="padding: 10px;"><a href="tutor3.php">next</a></p>
         </div>
     </div>
