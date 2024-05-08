@@ -6,9 +6,11 @@
     <title>Import SQL to PHPMyAdmin</title>
 </head>
 <body>
-    <h1>Import SQL to PHPMyAdmin</h1>
-    <form action="import.php" method="post">
-        <button type="submit" name="import">Import Database</button>
-    </form>
+    <div style="text-align: center;">
+        <h1>Import SQL to PHPMyAdmin</h1>
+        <form action="import.php" method="post">
+            <button type="submit" name="import">Import Database</button>
+        </form>
+    </div>
 </body>
 </html>
