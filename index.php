@@ -11,6 +11,9 @@
         <form action="import.php" method="post">
             <button type="submit" name="import">Install</button>
         </form>
+        <p><a href="http://localhost/phpmyadmin/">klik untuk mengecek instalan database</a></p>
+        <p>database yang terinstall secara otomatis berada di database web</p>
+        <p><a href="tutor1.php">next</a></p>
     </div>
 </body>
 </html>
