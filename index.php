@@ -9,7 +9,7 @@
     <div style="text-align: center;">
         <h1>Import SQL to PHPMyAdmin</h1>
         <form action="import.php" method="post">
-            <button type="submit" name="import">Import Database</button>
+            <button type="submit" name="import">Install Database</button>
         </form>
     </div>
 </body>
