@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2024 at 08:28 AM
+-- Generation Time: May 10, 2024 at 04:31 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -168,7 +168,23 @@ INSERT INTO `barang_dibeli` (`id_pembelian`, `id_barang`, `jumlah`) VALUES
 (31, 60, 3),
 (32, 7, 9),
 (33, 45, 1),
-(34, 29, 1);
+(34, 29, 1),
+(35, 4, 1),
+(35, 2, 1),
+(36, 6, 1),
+(37, 5, 1),
+(38, 5, 1),
+(39, 5, 1),
+(40, 4, 1),
+(41, 5, 1),
+(42, 5, 1),
+(43, 6, 1),
+(44, 7, 1),
+(44, 6, 1),
+(44, 4, 1),
+(45, 6, 1),
+(46, 2, 1),
+(47, 11, 1);
 
 -- --------------------------------------------------------
 
@@ -229,6 +245,8 @@ CREATE TABLE `pembelian` (
   `phone` varchar(20) NOT NULL,
   `alamat` varchar(100) DEFAULT NULL,
   `pemesanan_makanan` varchar(25) NOT NULL,
+  `timestamp` datetime DEFAULT NULL,
+  `bayar` varchar(50) DEFAULT NULL,
   `status` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -236,13 +254,27 @@ CREATE TABLE `pembelian` (
 -- Dumping data for table `pembelian`
 --
 
-INSERT INTO `pembelian` (`id`, `id_user`, `nama`, `phone`, `alamat`, `pemesanan_makanan`, `status`) VALUES
-(29, '0812345678', 'Ahmad Wildan', '', '', 'dine in', 'completed'),
-(30, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', 'in process'),
-(31, '0812345678', 'Ahmad Wildan', '', '', 'take away', 'in process'),
-(32, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', 'in process'),
-(33, '0812345678', 'Ahmad Wildan', '', '', 'dine in', 'in process'),
-(34, '0812345678', 'Ahmad Wildan', '', '', 'take away', 'in process');
+INSERT INTO `pembelian` (`id`, `id_user`, `nama`, `phone`, `alamat`, `pemesanan_makanan`, `timestamp`, `bayar`, `status`) VALUES
+(1, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', NULL, NULL, 'completed'),
+(29, '0812345678', 'Ahmad Wildan', '', '', 'dine in', NULL, NULL, 'completed'),
+(30, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', NULL, NULL, 'in process'),
+(31, '0812345678', 'Ahmad Wildan', '', '', 'take away', NULL, NULL, 'in process'),
+(32, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', NULL, NULL, 'in process'),
+(33, '0812345678', 'Ahmad Wildan', '', '', 'dine in', NULL, NULL, 'in process'),
+(34, '0812345678', 'Ahmad Wildan', '', '', 'take away', NULL, NULL, 'in process'),
+(35, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', NULL, NULL, 'completed'),
+(36, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '2024-05-07 02:08:13', NULL, 'in process'),
+(37, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '2020-02-04 00:00:00', NULL, 'in process'),
+(38, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '2024-05-07 02:05:09', NULL, 'in process'),
+(39, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '0000-00-00 00:00:00', NULL, 'in process'),
+(40, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '0000-00-00 00:00:00', NULL, 'in process'),
+(41, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '0000-00-00 00:00:00', NULL, 'in process'),
+(42, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '2024-05-07 07:14:23', NULL, 'in process'),
+(43, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '2024-05-07 07:14:49', NULL, 'in process'),
+(44, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '2024-05-08 11:36:17', 'cash', 'in process'),
+(45, '0812345678', 'Ahmad Wildan', '0812345678', 'Malang', 'delivery', '2024-05-08 11:36:24', 'ovo', 'in process'),
+(46, '0812345678', 'Ahmad Wildan', '', '', 'dine in', '2024-05-08 11:36:34', 'dana', 'in process'),
+(47, '0812345678', 'Ahmad Wildan', '', '', 'take away', '2024-05-08 11:36:47', 'qris', 'in process');
 
 -- --------------------------------------------------------
 
@@ -264,6 +296,7 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`id`, `id_pembelian`, `id_user`, `id_barang`, `rating`, `comment`) VALUES
+(1, 1, '0812345678', 14, 4, 'Cappucino enak worth it banget buat harga segini!'),
 (14, 29, '0812345678', 8, 4, 'Beta Review'),
 (15, 33, '0812345678', 8, 3, 'Beta Review');
 
@@ -358,7 +391,7 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -370,7 +403,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `pembelian`
 --
 ALTER TABLE `pembelian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `review`
