@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "";
+$database = "test";
 
 // Koneksi ke PHPMyAdmin
 $conn = new mysqli($servername, $username, $password, $database);
